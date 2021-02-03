@@ -1,5 +1,5 @@
 class Author < ApplicationRecord
-    has_one :address
+    has_one :address, dependent: :destroy
     validate :validates_dob_format
 
     def full_name
